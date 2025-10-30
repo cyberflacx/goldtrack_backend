@@ -1,0 +1,14 @@
+echo services:
+  - type: web
+    name: goldtrack-backend
+    env: node
+    buildCommand: npm install
+    startCommand: node server.js
+    plan: free
+    envVars:
+      - key: PORT
+        value: 10000
+      - key: JWT_SECRET
+        value: goldtrack_secret_key
+      - key: ADMIN_KEY
+        value: ZXCV1234IT > render.yaml
